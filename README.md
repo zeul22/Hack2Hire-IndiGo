@@ -41,7 +41,13 @@ Full Tutorial: https://www.youtube.com/watch?v=dwOOZaIta3U
 To get started with this project, clone the repository, set up the environment (.env) and install the dependencies:
 
 ```bash
-VITE_CLERK_PUBLISHABLE_KEY=
+PORT=8080
+DB_URL=
+TWILIO_ACCOUNT_SID=
+TWILIO_AUTH_TOKEN=
+
+TWILIO_FROM_NUMBER=
+
 ```
 
 ```bash
