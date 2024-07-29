@@ -86,7 +86,10 @@ npm run dev
 
 ## VISUALS
 ![UI](https://github.com/user-attachments/assets/4da32237-2500-4cf0-90de-a581955b2f73)
-![Responsiveness](https://www.loom.com/share/1e1d3680115d46d295c5fa2025990235?sid=e0a30dec-81bb-4c4c-a5fe-5e4729929143)
+
+
+[Responsiveness](https://www.loom.com/share/1e1d3680115d46d295c5fa2025990235?sid=88d28ba1-ae06-4ea3-a651-76f17484b275)
+
 
 
 ## TUTORIAL
