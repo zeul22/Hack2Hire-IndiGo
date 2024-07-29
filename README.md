@@ -1,6 +1,6 @@
-# Hack-to-Hire Frontend by IndiGo, lab37
+# Hack-to-Hire Backend by IndiGo, lab37
 
-This repository contains the frontend code for the Hack-to-Hire project by IndiGo, lab37. The UI/UX is crafted using React, JavaScript, TailwindCSS, and GSAP.
+This repository contains the backend code for the Hack-to-Hire project by IndiGo, lab37. The UI/UX is crafted using React, JavaScript, TailwindCSS, and GSAP.
 
 ## Problem Statement
 
