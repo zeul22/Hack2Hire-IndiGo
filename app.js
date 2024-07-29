@@ -1,7 +1,6 @@
 import express, { urlencoded } from "express";
 import cors from "cors";
 import cookieParser from "cookie-parser";
-import * as client from "prom-client";
 
 const app = express();
 
