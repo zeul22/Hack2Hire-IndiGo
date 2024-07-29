@@ -81,13 +81,17 @@ npm run dev
 - **Description:** Twilio is used for SMS notifications, and Firebase handles push notifications and real-time database capabilities.
 
 ### Diagram
+![SystemDesign](https://github.com/user-attachments/assets/c124c26d-cffd-4ecb-b785-ba19617e4c55)
+
 
 ## VISUALS
+![UI](https://github.com/user-attachments/assets/4da32237-2500-4cf0-90de-a581955b2f73)
+![Responsiveness](https://www.loom.com/share/1e1d3680115d46d295c5fa2025990235?sid=e0a30dec-81bb-4c4c-a5fe-5e4729929143)
+
 
 ## TUTORIAL
 
 [Project Representation](https://www.youtube.com/watch?v=dwOOZaIta3U&t=120s)
 
 ## DEVELOPED BY
-
--Rahul Anand [LinkedIN](https://www.linkedin.com/in/r-ahulanand/)
+- Rahul Anand [LinkedIn](https://www.linkedin.com/in/r-ahulanand/)
