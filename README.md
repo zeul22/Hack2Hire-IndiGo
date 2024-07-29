@@ -1,6 +1,6 @@
 # Hack-to-Hire Backend by IndiGo, lab37
 
-This repository contains the backend code for the Hack-to-Hire project by IndiGo, lab37. The UI/UX is crafted using React, JavaScript, TailwindCSS, and GSAP.
+This repository contains the backend code for the Hack-to-Hire project by IndiGo, lab37. The UI/UX is crafted using Nodejs, JavaScript & Express
 
 ## Problem Statement
 
@@ -19,13 +19,16 @@ Requirements:
 
 The following libraries are used in this project:
 
-- **React**: ^18.3.1
-- **React DOM**: ^18.3.1
-- **Axios**: ^1.7.2
-- **Firebase**: ^10.12.4
-- **GSAP**: ^3.12.5
-- **Locomotive Scroll**: ^4.1.4
-- **Lucide React**: ^0.416.0
+- `cookie-parser`: ^1.4.6
+- `cors`: ^2.8.5
+- `dotenv`: ^16.4.5
+- `express`: ^4.19.2
+- `mongoose`: ^8.5.1
+- `node-cron`: ^3.0.3
+- `node-mailjet`: ^6.0.5
+- `nodemailer`: ^6.9.14
+- `nodemon`: ^3.1.4
+- `twilio`: ^5.2.2
 
 ## Project Display
 
