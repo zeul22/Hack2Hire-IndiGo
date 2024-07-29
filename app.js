@@ -1,8 +1,10 @@
 import express, { urlencoded } from "express";
 import cors from "cors";
 import cookieParser from "cookie-parser";
+import * as client from "prom-client";
 
 const app = express();
+
 
 app.use(urlencoded());
 app.use(express.static("public"));
@@ -19,5 +21,6 @@ import userRouter from "./routes/user.routes.js";
 // Routes
 app.use("/flights", flighRouter);
 app.use("/user", userRouter);
+
 
 export { app };
