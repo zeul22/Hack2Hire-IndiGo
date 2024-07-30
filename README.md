@@ -108,7 +108,7 @@ npm run dev
 ![Backend_cron](https://github.com/user-attachments/assets/88309847-64b2-4bb3-9ce1-d21afee60821)
 
 ### Notification
-![SMS Notification](https://github.com/user-attachments/assets/85bafe04-2072-4692-9e4c-ca710ef7bda2)
+[SMS Notification](https://github.com/user-attachments/assets/85bafe04-2072-4692-9e4c-ca710ef7bda2)
 
 
 ![UI](https://github.com/user-attachments/assets/4da32237-2500-4cf0-90de-a581955b2f73)
