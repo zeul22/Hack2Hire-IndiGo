@@ -8,19 +8,15 @@ import { useEffect } from "react";
 import { messaging } from "../firebase.js";
 import { getToken } from "firebase/messaging";
 import FlightInfo from "./pages/FlightInfo.jsx";
-import LocomotiveScroll from 'locomotive-scroll';
 
 function App() {
-
-  const locomotiveScroll = new LocomotiveScroll();
 
   async function requirePermission() {
     const permission = await Notification.requestPermission();
     if (permission === "granted") {
       //Do Something
       const token = await getToken(messaging, {
-        vapidKey:
-          "BKBX8FyfqMG6UtUgkTt5hYr2RbxynUbHLK4s4zPsdrzKsk3RCi1BXUM11BaUVnc9it8tzmKnfbzjkcZSp5q-1Zg",
+        vapidKey: import.meta.VITE_VAPID_API_KEY,
       });
       console.log("Generated Token: ", token);
     } else if (permission === "denied") {
