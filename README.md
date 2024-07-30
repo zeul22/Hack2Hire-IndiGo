@@ -46,6 +46,7 @@ TWILIO_AUTH_TOKEN=
 TWILIO_SEND_NUMBER=
 TWILIO_FROM_NUMBER=
 ```
+- Run the commands
 
 ```bash
 git clone https://github.com/zeul22/Hack2Hire-IndiGo.git
