@@ -49,10 +49,12 @@ PORT=8080
 DB_URL=
 TWILIO_ACCOUNT_SID=
 TWILIO_AUTH_TOKEN=
-
 TWILIO_FROM_NUMBER=
-
+TWILIO_SEND_NUMBER=
+PROMETHEUS_TARGET=<Your IP>:8080
 ```
+
+- Please update the prometheus-config.yml, with your ip.
 
 ```bash
 git clone https://github.com/zeul22/Hack2Hire-IndiGo.git
@@ -63,9 +65,13 @@ docker run -d -p 3000:3000 --name=grafana grafana/grafana-oss
 docker run -d --name=loki -p 3100:3100 grafana/loki
 npm run dev
 node CronJob.mjs
-
-
 ```
+
+- To get your ip, write ifconfig on terminal (Linux, Mac)
+- For Windows, write ipconfig on command prompt
+- Prometheus will be hosted <Your IP>:9090
+- Grafana will be hosted <Your IP>:3000
+- Loki will be hosted on <Your IP>:3100
 
 ## DEMONSTRATION
 
@@ -137,10 +143,9 @@ node CronJob.mjs
 [Responsiveness](https://www.loom.com/share/1e1d3680115d46d295c5fa2025990235?sid=88d28ba1-ae06-4ea3-a651-76f17484b275)
 
 
-
 ## TUTORIAL
 
 [Project Representation](https://www.youtube.com/watch?v=dwOOZaIta3U&t=120s)
 
 ## DEVELOPED BY
-- Rahul Anand [LinkedIn](https://www.linkedin.com/in/r-ahulanand/)
+- Rahul Anand [LinkedIn](https://www.linkedin.com/in/r-ahulanand/), 
