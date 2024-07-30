@@ -1,8 +1,8 @@
 import { asyncHandler } from "../utils/asyncHandler.js";
 import ApiError from "../utils/ApiError.js";
 import { ApiResponse } from "../utils/ApiResponse.js";
-import { Flight } from "../models/Flight.js";
-import { User } from "../models/User.js";
+import { Flight } from "../models/Flight.model.js";
+import { User } from "../models/User.model.js";
 import { sendMessageEveryone, sendMessage } from "../SendSMS.js";
 
 const getallFlights = asyncHandler(async (req, res) => {
@@ -51,9 +51,6 @@ const getFlightInformation = asyncHandler(async (req, res) => {
       }
     });
   }
-  console.log(user);
-
-  console.log(flight);
   return res
     .status(200)
     .json(

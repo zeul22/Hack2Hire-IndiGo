@@ -57,12 +57,11 @@ async function updateData() {
         };
 
         const user = await collection2.find({ flightId: doc._id }).toArray();
-        console.log(user);
 
         if (user) {
           user.map((item, index) => {
             sendMessageEveryone(
-              917903457533,
+              process.env.TWILIO_SEND_NUMBER,
               `\n\n\n Dear Customer,\n\n We regret to inform you that your flight : ${doc.flightNumber} has been cancelled. \n\n We apologize for any inconvenience this may cause.`
             );
           });
@@ -86,11 +85,10 @@ async function updateData() {
           },
         };
         const user = await collection2.find({ flightId: doc._id }).toArray();
-        console.log(user);
         if (user) {
           user.map((item, index) => {
             sendMessageEveryone(
-              917903457533,
+              process.env.TWILIO_SEND_NUMBER,
               `\n\n\n Dear Customer,We regret to inform you that your flight: ${doc.flightNumber} has been Delayed by 45 mins. \n\n We apologize for any inconvenience this may cause.`
             );
           });

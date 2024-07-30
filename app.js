@@ -17,6 +17,7 @@ app.use(
 
 import flighRouter from "./routes/flight.routes.js";
 import userRouter from "./routes/user.routes.js";
+
 // Routes
 app.use("/flights", flighRouter);
 app.use("/user", userRouter);

@@ -32,9 +32,7 @@ The following libraries are used in this project:
 
 ## Project Display
 
-```
-Full Tutorial: https://www.youtube.com/watch?v=dwOOZaIta3U
-```
+[Full Tutorial](https://www.youtube.com/watch?v=dwOOZaIta3U)
 
 ## Installation
 
@@ -45,9 +43,8 @@ PORT=8080
 DB_URL=
 TWILIO_ACCOUNT_SID=
 TWILIO_AUTH_TOKEN=
-
+TWILIO_SEND_NUMBER=
 TWILIO_FROM_NUMBER=
-
 ```
 
 ```bash
@@ -55,6 +52,7 @@ git clone https://github.com/zeul22/Hack2Hire-IndiGo.git
 cd Hack2Hire-IndiGo
 npm install
 npm run dev
+node CronJob.mjs
 ```
 
 ## System Design Overview
@@ -93,7 +91,7 @@ npm run dev
 ![SystemDesign](https://github.com/user-attachments/assets/c124c26d-cffd-4ecb-b785-ba19617e4c55)
 
 
-## VISUALS
+## Visuals
 
 ### Backend Demonstration 
 - Used Cronjob to mock realtime changes
@@ -118,9 +116,9 @@ npm run dev
 
 
 
-## TUTORIAL
+## Tutorial
 
 [Project Representation](https://www.youtube.com/watch?v=dwOOZaIta3U&t=120s)
 
-## DEVELOPED BY
+## Developed By
 - Rahul Anand [LinkedIn](https://www.linkedin.com/in/r-ahulanand/)
