@@ -29,17 +29,23 @@ The following libraries are used in this project:
 
 ## Project Display
 
-```
-Full Tutorial: https://www.youtube.com/watch?v=dwOOZaIta3U
-```
+[Full Tutorial](https://www.youtube.com/watch?v=dwOOZaIta3U)
 
 ## Installation
 
-To get started with this project, clone the repository, set up the environment (.env) and install the dependencies:
+To get started with this project, clone the repository, set up the environment (.env.local) and install the dependencies:
 
 ```bash
 VITE_CLERK_PUBLISHABLE_KEY=
+VITE_API_KEY=
+VITE_AUTH_DOMAIN=
+VITE_PROJECT_ID=
+VITE_STORAGE_BUCKET=
+VITE_MESSAGING_SENDER_ID=
+VITE_APP_ID=
+VITE_MEASUREMENT_ID=
 ```
+- Run the commands
 
 ```bash
 git clone https://github.com/zeul22/Hack2Hire-IndiGo.git
@@ -84,7 +90,7 @@ npm run dev
 ![SystemDesign](https://github.com/user-attachments/assets/c124c26d-cffd-4ecb-b785-ba19617e4c55)
 
 
-## VISUALS
+## Visuals
 ![UI](https://github.com/user-attachments/assets/4da32237-2500-4cf0-90de-a581955b2f73)
 
 
@@ -92,9 +98,9 @@ npm run dev
 
 
 
-## TUTORIAL
+## Tutorial
 
 [Project Representation](https://www.youtube.com/watch?v=dwOOZaIta3U&t=120s)
 
-## DEVELOPED BY
+## Developed By
 - Rahul Anand [LinkedIn](https://www.linkedin.com/in/r-ahulanand/)

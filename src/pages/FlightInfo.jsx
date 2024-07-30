@@ -3,8 +3,6 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 
-
-
 const FlightInfo = () => {
   const param = useParams();
   const [data, setdata] = useState([]);
@@ -20,7 +18,6 @@ const FlightInfo = () => {
     setdata(response.data.data);
   };
   useEffect(() => {
-    console.log(param);
     fetchFlightData();
   }, []);
   return (

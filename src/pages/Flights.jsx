@@ -9,11 +9,9 @@ const Flights = () => {
   const [index, setIndex] = useState(-1);
 
   const getAllFlights = async () => {
-    console.log("New Flight update Data fetch");
     const response = await axios.get(
       "http://localhost:8080/flights/getflights"
     );
-    console.log(response);
     setData(response.data.data);
   };
 
@@ -22,7 +20,7 @@ const Flights = () => {
 
     const fetchInterval = setInterval(() => {
       getAllFlights();
-    }, 10000); // Fetch new data every 10 seconds
+    }, 10000); 
 
     return () => clearInterval(fetchInterval);
   }, []);

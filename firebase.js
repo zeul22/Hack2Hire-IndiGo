@@ -1,13 +1,13 @@
 import { initializeApp } from "firebase/app";
 import { getMessaging } from "firebase/messaging";
 const firebaseConfig = {
-  apiKey: "AIzaSyAbL9p2DaRj_V0mJVn5UKj1SqGbtq3nD2s",
-  authDomain: "indigo-hackathon.firebaseapp.com",
-  projectId: "indigo-hackathon",
-  storageBucket: "indigo-hackathon.appspot.com",
-  messagingSenderId: "816441116277",
-  appId: "1:816441116277:web:1e5c292ff800ed28149a3c",
-  measurementId: "G-0CCTK9XFW4",
+  apiKey: import.meta.env.VITE_API_KEY,
+  authDomain: import.meta.env.VITE_AUTH_DOMAIN,
+  projectId: import.meta.env.VITE_PROJECT_ID,
+  storageBucket: import.meta.env.VITE_STORAGE_BUCKET,
+  messagingSenderId: import.meta.env.VITE_MESSAGING_SENDER_ID,
+  appId: import.meta.env.VITE_APP_ID,
+  measurementId: import.meta.env.VITE_MEASUREMENT_ID,
 };
 
 export const app = initializeApp(firebaseConfig);
