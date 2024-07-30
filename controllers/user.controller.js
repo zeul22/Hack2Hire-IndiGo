@@ -7,7 +7,6 @@ import { logger } from "../app.js";
 const registerUser = asyncHandler(async (req, res) => {
   const { emailId, phoneNum } = req.body;
 
-  console.log(emailId, phoneNum);
   if ([emailId, phoneNum].some((field) => !field || field?.trim() === "")) {
     throw new ApiError(400, `All fields are required`);
   }

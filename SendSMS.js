@@ -11,7 +11,7 @@ const client = twilio(accountSid, authToken);
 
 export async function sendMessage(
   phoneNum,
-  body = "This is a Test Message!"
+  body = "Dear Customer, Thank you for using our service. We are glad to help you reach your destination. If you loved our services, please provide us the feedback!"
 ) {
   let messageOptions = {
     from: process.env.TWILIO_FROM_NUMBER,
@@ -27,8 +27,7 @@ export async function sendMessage(
   }
 }
 
-
-export  async function sendMessageEveryone(
+export async function sendMessageEveryone(
   phoneNum,
   body = "Dear Customer, We will send you the updates about the flight soon! Thank you for using our service!"
 ) {
@@ -40,7 +39,6 @@ export  async function sendMessageEveryone(
 
   try {
     const message = await client.messages.create(messageOptions);
-    console.log(message);
   } catch (error) {
     console.log(error);
   }

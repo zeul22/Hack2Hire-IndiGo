@@ -61,9 +61,9 @@ const getFlightInformation = asyncHandler(async (req, res) => {
       }
     });
   }
-  console.log(user);
+  
 
-  console.log(flight);
+  
   logger.info("Req came on /flight/getflight router.");
   return res
     .status(200)
@@ -100,7 +100,6 @@ const createFlight = asyncHandler(async (req, res) => {
 
 const insertManyFlight = asyncHandler(async (req, res) => {
   const result = await Flight.insertMany(flights);
-  console.log("Documents inserted:", result);
   for (const flight of result) {
     const flight_schedule = await Flight.findById(flight._id).select();
     if (!flight_schedule) {
