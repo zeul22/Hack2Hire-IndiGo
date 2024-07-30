@@ -73,7 +73,7 @@ node CronJob.mjs
 - Grafana will be hosted <Your IP>:3000
 - Loki will be hosted on <Your IP>:3100
 
-## DEMONSTRATION
+## Demonstration
 
 [Video Demonstration](https://github.com/user-attachments/assets/308fe376-a169-4657-9db5-dd7af7ee60a6)
 
@@ -119,7 +119,7 @@ node CronJob.mjs
 ![SystemDesign](https://github.com/user-attachments/assets/c124c26d-cffd-4ecb-b785-ba19617e4c55)
 
 
-## VISUALS
+## Visulas
 
 ### Backend Demonstration 
 - Used Cronjob to mock realtime changes
@@ -143,9 +143,9 @@ node CronJob.mjs
 [Responsiveness](https://www.loom.com/share/1e1d3680115d46d295c5fa2025990235?sid=88d28ba1-ae06-4ea3-a651-76f17484b275)
 
 
-## TUTORIAL
+## Tutorial
 
 [Project Representation](https://www.youtube.com/watch?v=dwOOZaIta3U&t=120s)
 
-## DEVELOPED BY
+## Developed By
 - Rahul Anand [LinkedIn](https://www.linkedin.com/in/r-ahulanand/), 
