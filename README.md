@@ -94,6 +94,21 @@ npm run dev
 
 
 ## VISUALS
+
+### Backend Demonstration 
+- Used Cronjob to mock realtime changes
+- Updates after every 10 seconds
+- Realtime changes show over frontend
+- Used the developed algorithm to alter the fligh information
+
+
+![Flight Algorithm](https://github.com/user-attachments/assets/1411d97b-aaac-4252-bdfe-39f41f9e6b87)
+
+
+![Backend_cron](https://github.com/user-attachments/assets/88309847-64b2-4bb3-9ce1-d21afee60821)
+
+
+
 ![UI](https://github.com/user-attachments/assets/4da32237-2500-4cf0-90de-a581955b2f73)
 
 
