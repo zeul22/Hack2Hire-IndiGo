@@ -2,6 +2,7 @@ import { asyncHandler } from "../utils/asyncHandler.js";
 import ApiError from "../utils/ApiError.js";
 import { User } from "../models/User.js";
 import { ApiResponse } from "../utils/ApiResponse.js";
+import { logger } from "../app.js";
 
 const registerUser = asyncHandler(async (req, res) => {
   const { emailId, phoneNum } = req.body;
@@ -17,7 +18,7 @@ const registerUser = asyncHandler(async (req, res) => {
     user.flightId = flightId;
 
     await user.save();
-
+    logger.info("Request came on User Registration.");
     return res
       .status(200)
       .json(new ApiResponse(200, user, "User's flightId updated successfully"));
@@ -29,6 +30,10 @@ const registerUser = asyncHandler(async (req, res) => {
 
   const createdUser = await User.findById(user._id).select(" -phoneNum");
   if (!createdUser) {
+    logger.error(
+      "Problem over user registration. Request came on User Registration."
+    );
+
     throw new ApiError(500, "Something went wrong while registering the user");
   }
 
@@ -51,6 +56,9 @@ const FlightIdRegistration = asyncHandler(async (req, res) => {
 
     res.status(200).json({ message: "Flight ID updated successfully", user });
   } catch (error) {
+    logger.error(
+      "Problem over user flight registration. Request came on User Registration."
+    );
     res.status(500).json({ message: "Error updating Flight ID", error });
   }
 });

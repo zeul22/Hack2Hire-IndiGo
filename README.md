@@ -1,6 +1,6 @@
-# Hack-to-Hire Backend by IndiGo, lab37
+# Hack-to-Hire (Monitoring & Logging) by IndiGo, lab37
 
-This repository contains the backend code for the Hack-to-Hire project by IndiGo, lab37. The UI/UX is crafted using Nodejs, JavaScript & Express
+This repository contains the backend code along with monitoring & Logging feature for the Hack-to-Hire project by IndiGo, lab37. The UI/UX is crafted using Prometheus, Grafana & Loki
 
 ## Problem Statement
 
@@ -19,16 +19,20 @@ Requirements:
 
 The following libraries are used in this project:
 
-- `cookie-parser`: ^1.4.6
-- `cors`: ^2.8.5
-- `dotenv`: ^16.4.5
-- `express`: ^4.19.2
-- `mongoose`: ^8.5.1
-- `node-cron`: ^3.0.3
-- `node-mailjet`: ^6.0.5
-- `nodemailer`: ^6.9.14
-- `nodemon`: ^3.1.4
-- `twilio`: ^5.2.2
+- "cookie-parser": "^1.4.6",
+- "cors": "^2.8.5",
+- "dotenv": "^16.4.5",
+- "express": "^4.19.2",
+- "mongoose": "^8.5.1",
+- "node-cron": "^3.0.3",
+- "node-mailjet": "^6.0.5",
+- "nodemailer": "^6.9.14",
+- "nodemon": "^3.1.4",
+- "prom-client": "^15.1.3",
+- "response-time": "^2.3.2",
+- "twilio": "^5.2.2",
+- "winston": "^3.13.1",
+- "winston-loki": "^6.1.2"
 
 ## Project Display
 
@@ -54,8 +58,18 @@ TWILIO_FROM_NUMBER=
 git clone https://github.com/zeul22/Hack2Hire-IndiGo.git
 cd Hack2Hire-IndiGo
 npm install
+docker compose up
+docker run -d -p 3000:3000 --name=grafana grafana/grafana-oss
+docker run -d --name=loki -p 3100:3100 grafana/loki
 npm run dev
+node CronJob.mjs
+
+
 ```
+
+## DEMONSTRATION
+
+
 
 ## System Design Overview
 

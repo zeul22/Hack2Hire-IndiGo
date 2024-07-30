@@ -4,12 +4,17 @@ import { ApiResponse } from "../utils/ApiResponse.js";
 import { Flight } from "../models/Flight.js";
 import { User } from "../models/User.js";
 import { sendMessageEveryone, sendMessage } from "../SendSMS.js";
+import { logger } from "../app.js";
 
 const getallFlights = asyncHandler(async (req, res) => {
   const flights = await Flight.find().sort({ departureTime: 1 });
   if (!flights) {
+    logger.error(
+      "Problem in /flight/getflights route. Flight information does not exist in database"
+    );
     throw new ApiError(500, "Something went wrong while fetching the flights");
   }
+  logger.info("Req came on /flight/getflights router.");
   return res
     .status(200)
     .json(new ApiResponse(200, flights, "Everythin is working good"));
@@ -20,20 +25,25 @@ const getFlightNotificationBySMS = asyncHandler(async (req, res) => {
   try {
     sendMessage(phoneNum);
   } catch (error) {
-    console.log(error);
+    logger.error(
+      "Problem in SMS Notification. Please check the integration with Twilio"
+    );
     throw new ApiError(500, "Something went wrong!");
   }
+  logger.info("Req came on /flight/smsnotificiation router.");
+
   return res
     .status(200)
     .json(new ApiResponse(200, "Notification send Successfully"));
 });
 
-
-
 const getFlightInformation = asyncHandler(async (req, res) => {
   const { id } = req.params;
   const flight = await Flight.findById(id);
   if (!flight) {
+    logger.error(
+      "Problem in /flight/getflight route. Specific Flight information does not exist in database"
+    );
     throw new ApiError(400, "Flight Information does not exist!");
   }
 
@@ -54,6 +64,7 @@ const getFlightInformation = asyncHandler(async (req, res) => {
   console.log(user);
 
   console.log(flight);
+  logger.info("Req came on /flight/getflight router.");
   return res
     .status(200)
     .json(
@@ -93,11 +104,13 @@ const insertManyFlight = asyncHandler(async (req, res) => {
   for (const flight of result) {
     const flight_schedule = await Flight.findById(flight._id).select();
     if (!flight_schedule) {
+      logger.error("Creating a flight timeline had an issue");
       throw new Error(
         "Something went wrong while retrieving the flight schedule"
       );
     }
   }
+  logger.info("Request came on /flight/insertflights");
   return res
     .status(201)
     .json(new ApiResponse(200, result, "Flight Schedule created Successfully"));
